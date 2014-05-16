@@ -1,12 +1,38 @@
+vault-api API only Vault
+=====================
+
+Advantages over using vault for maven dependencies include:
+* Source and javadoc published to maven repository
+* No implementation included
+* Doesn't have pom invalid errors
+* Is literally API copied from vault, fully compatible
+
+How to use with maven:
+```
+   <repositories>
+      <repository>
+         <id>repo-daboross-net</id>
+         <url>http://repo.daboross.net/</url>
+      </repository>
+   </repositories>
+   <dependencies>
+      <dependency>
+         <groupId>net.daboross.vault</groupId>
+         <artifactId>vault-api</artifactId>
+         <version>1.2.27</version>
+         <scope>provided</scope>
+      </dependency>
+   </dependencies>
+
+```
+
+# Original README for vault:
+
+
 # Vault - Abstraction Library for Bukkit Plugin
 
-## Installing
-Installing Vault is as simple as copying the provided "Vault.jar" to your
-"<bukkit-install-dir>/plugins" directory and the rest is automatic!  If you
-wish to perform configuration changes, this can be done via a configuration
-file but should not be necessary in most cases.  See the "Advanced
-Configuration" section for more information.
-
+- __This project itself is a modification of Vault which removes all implementation leaving only an API.__
+- __The main Vault project is at https://github.com/MilkBowl/Vault__ 
 
 ## Why Vault?
 I have no preference which library suits your plugin and development efforts
@@ -28,11 +54,6 @@ So, what features do I _think_ you'll like the most?
    That's half the fun of Bukkit, we get to choose what to use!  More choice
    has never hurt developers so here's to choice!
 
-
-## Permissions
- * vault.admin
-   - Determines if a player should recieve the update notices
-
 ## License
 Copyright (C) 2011 Morgan Humes <morgan@lanaddict.com>
 
@@ -52,15 +73,6 @@ along with Vault.  If not, see <http://www.gnu.org/licenses/>.
 ## Building
 Vault comes with all libraries needed to build from the current branch and
 also comes with an Apache Ant build file (build.xml).
-
-
-## Dependencies
-Because Vault provides a bridge to other plugins, their binaries will be
-required to build from.  To ease this, they have been included in the lib
-folder and will be updated from time to time.  For plugin developers, it
-is not necessary to use these libraries when implementing Vault.  You will
-only need to compile against Vault.
-
 
 ## Supported Plugins
 Vault provides abstraction for the following categories and plugins.  If you
