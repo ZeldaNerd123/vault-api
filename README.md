@@ -1,6 +1,10 @@
 vault-api API only Vault
 =====================
 
+This is an archived project as Vault now provides their own api-only project.
+
+Only use this if you need the API of older versions of Vault. Otherwise, check out https://github.com/MilkBowl/VaultAPI.
+
 Advantages over using vault for maven dependencies include:
 * Source and javadoc published to maven repository
 * No implementation included
